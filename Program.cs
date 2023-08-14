@@ -51,43 +51,17 @@ class Program
 
     static void InitializeQuizQuestions(QuizDbContext context)
     {
-        context.Database.EnsureCreated();
+        context.Database.EnsureCreated(); // makes sure the database exists
+
+
 
         if (!context.Questions.Any())
         {
             context.Questions.Add(new QuestionEntity
             {
-                QuestionText = "What is the capital of France?",
-                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
-                CorrectAnswer = 2
-            });
-
-            context.Questions.Add(new QuestionEntity
-            {
-                QuestionText = "Which planet is known as the 'Red Planet'?",
-                Options = new string[] { "Mars", "Jupiter", "Venus", "Saturn" },
-                CorrectAnswer = 1
-            });
-
-            context.Questions.Add(new QuestionEntity
-            {
-                QuestionText = "What is the capital of France?",
-                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
-                CorrectAnswer = 2
-            });
-
-            context.Questions.Add(new QuestionEntity
-            {
-                QuestionText = "What is the capital of France?",
-                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
-                CorrectAnswer = 2
-            });
-
-            context.Questions.Add(new QuestionEntity
-            {
-                QuestionText = "What is the capital of France?",
-                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
-                CorrectAnswer = 2
+                QuestionText = " What is the extension of a C# language file?",
+                Options = new string[] { ".c", ".cpp", ".cs", ".csp" },
+                CorrectAnswer = 3
             });
 
             context.Questions.Add(new QuestionEntity
@@ -96,6 +70,37 @@ class Program
                 Options = new string[] { "Microsoft", "Oracle", "Google", "IBM" },
                 CorrectAnswer = 1
             });
+
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "SOAP in C# stands for ___",
+                Options = new string[] { "Simple Object Access Protocol", "Simple Object Access Program", "Simple Object Access Protocal", "Standard Object Access Protocol" },
+                CorrectAnswer = 1
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "Which symbols are used to mark the beginning and end of a code block?",
+                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
+                CorrectAnswer = 2
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "What is the capital of France?",
+                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
+                CorrectAnswer = 2
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "What is the capital of France?",
+                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
+                CorrectAnswer = 2
+            });
+
+            
 
             context.Questions.Add(new QuestionEntity
             {
