@@ -5,11 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 
-using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-
 class Program
 {
     static void Main()
@@ -19,7 +14,7 @@ class Program
             InitializeQuizQuestions(context);
 
             Console.WriteLine("Welcome to the Quiz Application!");
-            Console.WriteLine("Answer the following questions:\n");
+            Console.WriteLine("Here are C# questions: Answer the following questions:\n");
 
             int totalScore = 0;
             var quizQuestions = context.Questions.ToList();
@@ -72,6 +67,48 @@ class Program
                 QuestionText = "Which planet is known as the 'Red Planet'?",
                 Options = new string[] { "Mars", "Jupiter", "Venus", "Saturn" },
                 CorrectAnswer = 1
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "What is the capital of France?",
+                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
+                CorrectAnswer = 2
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "What is the capital of France?",
+                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
+                CorrectAnswer = 2
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "What is the capital of France?",
+                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
+                CorrectAnswer = 2
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "C# is a programming language programmed by?",
+                Options = new string[] { "Microsoft", "Oracle", "Google", "IBM" },
+                CorrectAnswer = 1
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "C# runs on the",
+                Options = new string[] { "Java Virtual Machine", ".NET Framework", "Both 1 and 2", "None" },
+                CorrectAnswer = 2
+            });
+
+            context.Questions.Add(new QuestionEntity
+            {
+                QuestionText = "What is the capital of France?",
+                Options = new string[] { "Berlin", "Paris", "London", "Rome" },
+                CorrectAnswer = 2
             });
 
             context.SaveChanges();
